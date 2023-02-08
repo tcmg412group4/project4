@@ -6,8 +6,8 @@ data = open('EntireLog.txt','w+')
 
 for line in textfile:
     strline = str(line)
-    data.write(strline)
-    data.write('\n')
+    data.write(strline + '\n')
+    
 
 data.close()
 
