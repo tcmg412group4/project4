@@ -11,10 +11,10 @@ for line in log:                                                                
     if x == None:                                                                               # if it doesnt find the date pattern on a line, that means its an error log or something else
         matches.append("Error or No Log")                                                       # appends the string "Error or No Log" to the matches list     
     else:
-        matches.append(x)                                                               # If a date pattern is found, the Date is added to the matches list as a string
+        matches.append(x)                                                                       # If a date pattern is found, the Date is added to the matches list as a string
         
 data.close()
 
 print(matches[130].group())
-print(matches[130])                                                                                         # test to see if it worked
+print(matches[130])                                                                             # test to see if it worked
 
