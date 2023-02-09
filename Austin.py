@@ -1,6 +1,6 @@
 import re                                                                                       # imports package to use python regular expressions
 
-pattern = re.compile("[0-9]{2}[^a-zA-Z0-9]{1}[a-zA-Z]{3}[^a-zA-Z0-9]{1}[0-9]{4}?")              # Date Pattern in regex form specified for the date format found in the log
+pattern = re.compile("[0-9]{2}[^a-zA-Z0-9]{1}[a-zA-Z]{3}[^a-zA-Z0-9]{1}[0-9]{4}?")              # Date Pattern ##/MMM/#### in regex form specified for the date format found in the log
 
 data = open('EntireLog.txt', 'r')                                                               # imports the file that contains the data
 log = data.readlines()                                                                          # reads the entire log file line by line
