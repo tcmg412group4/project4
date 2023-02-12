@@ -24,10 +24,10 @@ with open('EntireLog.txt') as data:
     dec = good / allreq
     perc = "{:.0%}".format(dec)
     decc = (bad / allreq)
-    percent = "{:.0%}".format(decc)
+    perc2 = "{:.0%}".format(decc)
 
-print("unsuccessful requests = ",bad)
-print("redirected requests = ",good)
+print("unsuccessful requests = ",perc)
+print("redirected requests = ",perc2)
 print(pattern)
 
 
