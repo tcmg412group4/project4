@@ -62,13 +62,14 @@ for i in matches:
         sep.append(i)
     elif i.find("Oct/1995") != -1 :
         oct95.append(i)
-    elif i.find("local 780") != -1 :
+    elif i.find("local 780") != -1 :                    #not sure how to append error log to proper month lists
+        errorlog.append(i)
+    elif i.find("local      index.html") != -1 :
         errorlog.append(i)
 
     
 
-print(len(oct94))
-print(len(nov))
-print(len(dec))
+
+
 
 
