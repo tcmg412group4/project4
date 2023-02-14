@@ -52,6 +52,8 @@ print(matches[128])                                                             
 
 for i in matches:
 
+    y = re.search(pattern, i)
+
     if i.find('Oct/1994') != -1 :
         oct94.append(i)
         october94.write(i + '\n')
@@ -97,6 +99,7 @@ for i in matches:
     elif i.find("local      index.html") != -1 :
         errorlog.append(i)
         errorLog.write(i + '\n')
+    
                                                         # program works, splits logs into monthly files after being run, all except the error logs. Not sure
                                                         # about how to add the error logs to the proper month when the program is parsing through the entire log file. 
 
