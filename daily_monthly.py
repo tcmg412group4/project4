@@ -23,5 +23,14 @@ for i in matches:
 
 print("There were ", x, " requests made on ", ui)
 
+print( "Please enter the first 3 letters of the month you'd like to view data for. For example, January = Jan, February = Feb, etc.")
+print( "If you are attempting to view data for October, please specify the year as follows: Oct/1994 or Oct/1995")
+month_ui = input(" Month: ")
 
+z = 0
+for y in matches:
+    if y.find(month_ui) != -1:
+        z = z + 1
+    
+print ("There were ", z, "requests made in the month:", month_ui)
 
