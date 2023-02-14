@@ -45,12 +45,10 @@ for line in log:                                                                
         matches.append(line)                                                                    # appends the line to the matches list     
     else:
         matches.append(line)                                                                    # If a date pattern is found, the Date is added to the matches list as a string
-        
+    
 
-print(matches[128])                                                                             # test to print the line
-
-for i in matches:
-
+for i in matches:                                                                               # for loop for finding dates in logs and then appends them to corresponding list
+                                                                                                # and writes the log into a corresponding .txt file
     if i.find('Oct/1994') != -1 :
         oct94.append(i)
         october94.write(i + '\n')
@@ -98,6 +96,8 @@ for i in matches:
         errorLog.write(i + '\n')
                                                         # program works, splits logs into monthly files after being run, all except the error logs. Not sure
                                                         # about how to add the error logs to the proper month when the program is parsing through the entire log file. 
+
+# above portion will write logs into monthly text files, which will then be used to gather more data
 
 
 with open('October94.txt', 'r') as oct_94:
