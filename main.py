@@ -1,4 +1,7 @@
-## this will be our main python file, which will house the final code for this project
+# This will be our main python file, which will house the final code for this project
+
+# This is the updated version of the code from project 3, which will be used to parse
+# the log file and create a list of all the dates in the log file
 
 import re                                                                                       # imports package to use python regular expressions
 
