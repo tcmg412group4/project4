@@ -1,3 +1,5 @@
+## this will be our main python file, which will house the final code for this project
+
 import re                                                                                       # imports package to use python regular expressions
 
 pattern = re.compile("[0-9]{2}[^a-zA-Z0-9]{1}[a-zA-Z]{3}[^a-zA-Z0-9]{1}[0-9]{4}?")              # Date Pattern ##/MMM/#### in regex form specified for the date format found in the log
@@ -6,7 +8,6 @@ data = open('EntireLog.txt', 'r')                                               
 log = data.readlines()                                                                          # reads the entire log file line by line
 matches = [] 
 
-                                                                                   # empty list to hold any matches we get when parsing for the Date pattern
 
 oct94 = []
 nov = []
@@ -21,17 +22,17 @@ jul = []
 aug = []
 sep = []
 oct95 = []
+errorlog = []
 
 for line in log:                                                                                # for loop for parsing through text file line by line 
     x = re.search(pattern, line)                                                                # searches each line for the Date pattern
     if x != None:                                                                               # if it doesnt find the date pattern on a line, that means its an error log or something else
-        matches.append(line)                                                                    # appends the string "Error or No Log" to the matches list     
+        matches.append(line)                                                                    # appends the line to the matches list     
     else:
         matches.append(line)                                                                    # If a date pattern is found, the Date is added to the matches list as a string
         
-data.close()
 
-print(matches[128])                                                                             # prints the line
+print(matches[128])                                                                             # test to print the line
 
 for i in matches:
 
@@ -61,6 +62,9 @@ for i in matches:
         sep.append(i)
     elif i.find("Oct/1995") != -1 :
         oct95.append(i)
+    elif i.find("local 780") != -1 :
+        errorlog.append(i)
+
     
 
 print(len(oct94))
